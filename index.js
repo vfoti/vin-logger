@@ -8,7 +8,17 @@ app.get('/', function (req, res) {
 });
 
 app.post('/', function (req, res) {
-	console.log(req);
+
+	console.log('--------------------------------');
+	console.log('authorization', atob(req.get("authorization")));
+	console.log('x-forwarded-proto', req.get('x-forwarded-proto'));
+	console.log('x-forwarded-for', req.get('x-forwarded-for'));
+	console.log('x-forwarded-port', req.get('x-forwarded-port'));
+	console.log('params', req.params);
+	console.log('query', req.query);
+	console.log('--------------------------------');
+	
+	res.send('OK');
 });
 
 // Heroku
