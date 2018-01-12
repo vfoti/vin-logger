@@ -5,7 +5,8 @@ app.set('port', (process.env.PORT || 5000));
 
 app.get('/', function (req, res) {
 
-	console.log('--------------------------------');
+	console.log('GET--------------------------------');
+	console.log('base URL', req.baseUrl);
 	console.log('authorization', req.get("authorization"));
 	console.log('x-forwarded-proto', req.get('x-forwarded-proto'));
 	console.log('x-forwarded-for', req.get('x-forwarded-for'));
@@ -20,7 +21,8 @@ app.get('/', function (req, res) {
 
 app.post('/', function (req, res) {
 
-	console.log('--------------------------------');
+	console.log('POST--------------------------------');
+	console.log('base URL', req.baseUrl);
 	console.log('authorization', req.get("authorization"));
 	console.log('x-forwarded-proto', req.get('x-forwarded-proto'));
 	console.log('x-forwarded-for', req.get('x-forwarded-for'));
@@ -35,7 +37,8 @@ app.post('/', function (req, res) {
 
 app.put('/', function (req, res) {
 
-	console.log('--------------------------------');
+	console.log('PUT--------------------------------');
+	console.log('base URL', req.baseUrl);
 	console.log('authorization', req.get("authorization"));
 	console.log('x-forwarded-proto', req.get('x-forwarded-proto'));
 	console.log('x-forwarded-for', req.get('x-forwarded-for'));
