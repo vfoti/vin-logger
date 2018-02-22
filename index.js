@@ -6,7 +6,7 @@ app.set('port', (process.env.PORT || 5000));
 app.get('/', function (req, res) {
 
 	console.log('--------------------------------GET');
-	console.log(JSON.stringify(req));
+	console.log(req);
 	console.log('--------------------------------');
 	console.log('base URL', req.baseUrl);
 	console.log('authorization', req.get("authorization"));
