@@ -6,6 +6,8 @@ app.set('port', (process.env.PORT || 5000));
 app.get('/', function (req, res) {
 
 	console.log('--------------------------------GET');
+	console.log(JSON.stringify(req));
+	console.log('--------------------------------');
 	console.log('base URL', req.baseUrl);
 	console.log('authorization', req.get("authorization"));
 	console.log('x-forwarded-proto', req.get('x-forwarded-proto'));
