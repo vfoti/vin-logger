@@ -1,8 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const xmlparser = require('express-xml-bodyparser');
 const app = express();
 
+app.use(bodyParser.text())
+app.use(bodyParser.json())
 app.use(bodyParser.raw())
+app.use(xmlparser())
 
 app.set('port', (process.env.PORT || 5000));
 
