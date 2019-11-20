@@ -30,6 +30,7 @@ app.post('/', function (req, res) {
 	console.log('params', req.params);
 	console.log('query', req.query);
 	console.log('body', req.body);
+	console.log(req);
 	console.log('--------------------------------');
 
 	res.send('OK');
