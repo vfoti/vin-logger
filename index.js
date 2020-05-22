@@ -29,6 +29,7 @@ app.get('/', function (req, res) {
 app.post('/', function (req, res) {
 
 	console.log('--------------------------------POST');
+	console.log('headers', req.headers);
 	console.log('base URL', req.baseUrl);
 	console.log('authorization', req.get("authorization"));
 	console.log('x-forwarded-proto', req.get('x-forwarded-proto'));
