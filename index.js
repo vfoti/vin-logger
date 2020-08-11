@@ -12,7 +12,7 @@ app.use(xmlparser());
 app.set('port', (process.env.PORT || 5000));
 
 app.get('/validate', (req, res) => {
-	res.send({ 'validation_code': 'a8fb5f33-f68a-405c-b174-da45a9458836' });
+	res.send('validation_code=a8fb5f33-f68a-405c-b174-da45a9458836');
 });
 
 app.get('/inbound-sms', function (req, res) {
