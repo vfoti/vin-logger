@@ -15,7 +15,7 @@ app.get('/validate', (req, res) => {
 	res.send({ 'confirmation_code': 'a8fb5f33-f68a-405c-b174-da45a9458836' });
 });
 
-app.get('/inbound-sms', function (req, res) {
+app.post('/inbound-sms', function (req, res) {
 
 	console.log('--------------------------------GET');
 	console.log('base URL', req.baseUrl);
