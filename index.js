@@ -17,9 +17,7 @@ app.get('/validate', (req, res) => {
 
 app.post('/body', function (req, res) {
 
-	console.log('--------------------------------BODY');
-	console.log(JSON.stringify(req.body));
-	console.log('--------------------------------');
+	console.log(req.body);
 
 	res.send('OK');
 });
